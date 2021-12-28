@@ -1,0 +1,57 @@
+# Wrong-Programs
+Programs which I did it wrong and I need help
+import java.util.*;
+class merger
+{
+    public int acceptor( boolean gate,int[] P,int[] Q)
+    {
+        merger ob = new merger();
+        ob.display();
+        
+        if(gate==false)
+        {
+            for(int i =0;i<P.length;i++)
+            {
+                return P[i];
+            }
+        }
+        else if(gate==true)
+        {
+           for(int j = 0 ; j<Q.length;j++)
+            { 
+                return Q[j]; 
+            }
+        }
+        return 0;//dummy return
+    }
+    public  static void main()
+    {
+        int[] R = new int[10];
+        boolean gate = false;
+        int c =0;
+        for( c = 0;c<6;c++)
+        R[c]=acceptor(gate);
+        gate = true;
+        for(int x = c;x<R.length;x++)
+        R[x]=acceptor(gate);
+        for(int i = 0;i<R.length;i++)
+        System.out.println();
+    }
+    public  int[] display()
+    {
+        System.out.println("Enter elements for P");
+        Scanner sc = new Scanner(System.in);
+        int[] P = new int[6];
+        int[] Q = new int[4];
+        for(int i=0;i<P.length;i++)
+        {
+            P[i]=sc.nextInt();
+        }
+        System.out.println("Enter elements of Q");
+        for(int j = 0; j<Q.length;j++)
+        {
+            Q[j]=sc.nextInt();
+        }
+        
+    }
+}
